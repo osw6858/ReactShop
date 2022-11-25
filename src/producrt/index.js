@@ -9,7 +9,8 @@ function PorductComponent() {
   useEffect(function () {
     axios
       .get(
-        `https://41116889-f659-46c1-963d-21713ab8da7c.mock.pstmn.io/products/${id}`
+        `
+        https://41116889-f659-46c1-963d-21713ab8da7c.mock.pstmn.io/products/${id}`
       )
       .then(function (result) {
         setProduct(result.data);
