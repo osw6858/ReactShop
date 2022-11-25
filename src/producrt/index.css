@@ -54,3 +54,10 @@ align-items ( 세로축 - 교차축 )
 #description {
   margin-top: 16px;
 }
+
+#loading {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

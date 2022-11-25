@@ -1,15 +1,31 @@
+import { Button } from "antd";
+import { UploadOutlined } from "@ant-design/icons";
 import "./App.css";
 import MainPageComponent from "./main/index.js";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Link, useHistory } from "react-router-dom";
 import UploadComponemt from "./upload";
 import PorductComponent from "./producrt";
+//Link 컴포넌트는 HTML5 History API를 사용하여 브라우저의 주소만 바꿀 뿐,
+//페이지를 새로 불러오지는 않는다.
 
 function App() {
+  const history = useHistory();
   return (
     <div>
       <div id="header">
         <div id="head-area">
-          <img src="/images/icons/logo.png" />
+          <Link to={"/"}>
+            <img src="/images/icons/logo.png" />
+          </Link>
+          <Button
+            size="large"
+            onClick={function () {
+              history.push("/upload");
+            }}
+            icon={<UploadOutlined />}
+          >
+            상품업로드
+          </Button>
         </div>
       </div>
       <div id="body">

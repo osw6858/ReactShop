@@ -22,7 +22,11 @@ function PorductComponent() {
   /*비동기 통신으로 페이지가 렌더링이 먼저 되고 promise객체가 나중에 업데이트 되면서 렌더링되는데
     useState 초기값이 null이라 첫 렌더링시 null.상품이름 하면 오류가 나기 때문에 조건문 설정*/
   if (product === null) {
-    return <h1>상품 정보를 받아오고 있습니다...</h1>;
+    return (
+      <div id="loading">
+        <h1>상품 정보를 받아오고 있습니다...</h1>
+      </div>
+    );
   }
 
   return (

@@ -5,11 +5,29 @@ body,
   height: 100%;
 }
 
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 #header {
   height: 64px;
   display: flex;
   justify-content: center;
   border-bottom: 1px solid gray;
+}
+
+#head-area {
+  width: 1024px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#head-area img {
+  width: 128px;
+  height: 36px;
 }
 
 #body {
