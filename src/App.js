@@ -4,7 +4,7 @@ import "./App.css";
 import MainPageComponent from "./main/index.js";
 import { Switch, Route, Link, useHistory } from "react-router-dom";
 import UploadComponemt from "./upload";
-import PorductComponent from "./producrt";
+import PorductComponent from "./product";
 //Link 컴포넌트는 HTML5 History API를 사용하여 브라우저의 주소만 바꿀 뿐,
 //페이지를 새로 불러오지는 않는다.
 
