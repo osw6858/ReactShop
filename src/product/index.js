@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import React from "react";
+import { Space, Spin } from "antd";
 import "./index.css";
 import dayjs from "dayjs";
 import { API_URL } from "../config/constant.js";
@@ -8,6 +10,7 @@ import { API_URL } from "../config/constant.js";
 function PorductComponent() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
+
   useEffect(function () {
     axios
       .get(
@@ -27,7 +30,9 @@ function PorductComponent() {
   if (product === null) {
     return (
       <div id="loading">
-        <h1>상품 정보를 받아오고 있습니다...</h1>
+        <Space size="middle">
+          <Spin size="large" />
+        </Space>
       </div>
     );
   }

@@ -19,6 +19,7 @@ function UploadComponemt() {
   const onSubmit = (values) => {
     axios
       .post(`${API_URL}/products`, {
+        //상품등록 버튼을 눌렀을때 post로 서버에 보내줄 json
         name: values.name,
         description: values.description,
         seller: values.seller,

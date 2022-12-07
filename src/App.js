@@ -9,18 +9,18 @@ import PorductComponent from "./product";
 //페이지를 새로 불러오지는 않는다.
 
 function App() {
-  const history = useHistory();
+  const history = useHistory(); //url을 변경할때 사용하는 Hook
   return (
     <div>
       <div id="header">
         <div id="head-area">
           <Link to={"/"}>
-            <img src="/images/icons/logo.png" />
+            <img src="/images/icons/logo.png" alt="로고" />
           </Link>
           <Button
             size="large"
             onClick={function () {
-              history.push("/upload");
+              history.push("/upload"); //주소에 upload를 추가
             }}
             icon={<UploadOutlined />}
           >
