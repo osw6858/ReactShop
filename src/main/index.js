@@ -52,7 +52,11 @@ function MainPageComponent() {
         {products.map((product, index) => {
           return (
             <div className="product-card">
-              {product.soldout === 1 && <div className="product-blur" />}
+              {
+                product.soldout === 1 && (
+                  <div className="product-blur" />
+                ) /*DB에 저장된 soldout의 값이 1이면 블러처리  */
+              }
               <Link className="product-link" to={`/products/${product.id}`}>
                 <div>
                   <img

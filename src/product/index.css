@@ -12,7 +12,7 @@ align-items ( 세로축 - 교차축 )
 #image-box > img {
   width: 100%;
   max-height: 300px;
-  object-fit: contain;
+  object-fit: contain; /*종횡비를 맞줘라 */
 }
 
 #profile-box {

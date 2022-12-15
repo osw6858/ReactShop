@@ -44,16 +44,18 @@ body,
 }
 
 @media screen and (max-width: 400px) {
+  /*media query -> 특정 조건에서 적용되는 css => if문이랑 비슷*/
   .product-card {
     width: 160px !important;
   }
   #header {
-    padding: 0 8px;
+    padding: 0 8px; /*좌우만 padding 8px 주기 */
   }
   #body {
-    padding: 0 8px;
+    padding: 0 8px; /*좌우만 padding 8px 주기 */
   }
   .ant-carousel {
-    margin: 0 -8px;
+    /*ant-carousel => 기본적으로 Carousel에서 제공해주는 클래스 네임*/
+    margin: 0 -8px; /*배너는 꽉 차게 보이기 위해 Carousel만 8px늘려놓음*/
   }
 }
